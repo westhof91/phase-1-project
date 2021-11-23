@@ -54,10 +54,9 @@ img {
     
 }
 
-all-drinks {
-    position: relative;
-    width: 1200px;
-    height: 300px;
-    margin: 240px auto;
-    background: #000;
+.drink {
+    list-style-type: none ;
+    border-style: solid;
+    padding: 20px;
+    margin: 5px;
 }

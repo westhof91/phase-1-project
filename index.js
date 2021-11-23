@@ -6,19 +6,23 @@ const renderDrinkListItem = (drink) => {
   const {strDrink, strCategory, strDrinkThumb, strIngredient1, strInstructions} = drink;
 
 
-const drinkLi = document.createElement("li");
-drinkLi.innerText = `${strDrink} : ${strCategory} : ${strIngredient1} : ${strInstructions}`;
- drinkLi.className = `drink ${strIngredient1.toLowerCase()}`;
+  const drinkLi = document.createElement("li");
+  // drinkLi.innerText = `${strDrink} : ${strCategory} : ${strIngredient1} : ${strInstructions}`;
+  drinkLi.className = `drink ${strIngredient1.toLowerCase()}`;
 
-const drinkImg = document.createElement("img");
-drinkImg.src = strDrinkThumb;
-drinkImg.className = "drink-image";
-
+  const drinkInstructions = document.createElement("p");
+  drinkInstructions.innerText = strInstructions;
 
 
-drinkLi.append(drinkImg);
+  const drinkImg = document.createElement("img");
+  drinkImg.src = strDrinkThumb;
+  drinkImg.className = "drink-image";
 
-navAll.append(drinkLi);
+
+
+  drinkLi.append(drinkImg, drinkInstructions);
+
+  navAll.append(drinkLi);
 };
 
 
