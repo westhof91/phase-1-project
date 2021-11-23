@@ -1,56 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBer</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NavBer</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
 
- <body>
-    <nav>
-        <div class="container">
-            
-            <!-- <div class='box'></div>
-            <div class='box'></div>
-            <div class='box'></div>
-         -->
-   
-    
-    
-                 <div class='box'>
-                        <button id='gin'> Gin Recipies</button>
-                    </div>   
-                        <button id='vodka'> Vodka Recipies</button>
+    <body>
+        <div class="content-container">
+            <div class='drink-selection-buttons'>
                 <div class='box'>
-                        <button id='rum'> Rum Recipies</button>
-                    </div>   
+                    <button id='gin'> Gin Recipies</button>
+                </div> 
                 <div class='box'>
-                        <button id='whiskey'> Whiskey Recipies</button>
-                    </div>   
+                    <button id='vodka'> Vodka Recipies</button>
+                </div>  
+                    
                 <div class='box'>
-                        <button id='all-drink'> All Drink Recipies</button>
-                    </div>   
-                 <div class='box'>
-                    <div id='filter-drinks'></div>
-                </div>
+                    <button id='rum'> Rum Recipies</button>
+                </div>   
+                <div class='box'>
+                    <button id='whiskey'> Whiskey Recipies</button>
+                </div>   
+                <div class='box'>
+                    <button id='all-drink'> All Drink Recipies</button>
+                </div>   
             </div>
 
-
-            <div id='all-drinks'></div> 
+            <div id='drink-container'>
+                <ul id='all-drinks'></ul>
+             </div> 
         
         </div>
-        
-        
-    </nav> 
-       
-    
 
-
-
-    
-
-    <script defer type="text/javascript" src="index.js"></script>
-</body>
+        <script defer type="text/javascript" src="index.js"></script>
+    </body>
 </html>

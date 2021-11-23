@@ -7,7 +7,7 @@ const renderDrinkListItem = (drink) => {
 
 
 const drinkLi = document.createElement("li");
-drinkLi.innerText = `${strDrink} : ${strCategory} : ${strDrinkThumb} : ${strIngredient1} : ${strInstructions}`;
+drinkLi.innerText = `${strDrink} : ${strCategory} : ${strIngredient1} : ${strInstructions}`;
  drinkLi.className = `drink ${strIngredient1.toLowerCase()}`;
 
 const drinkImg = document.createElement("img");
