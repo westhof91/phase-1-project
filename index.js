@@ -1,5 +1,6 @@
+
 const siteUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
-const navAll = document.getElementById("all-drinks")
+const drinkCard = document.getElementById("all-drinks")
 const drinkList = document.getElementById('drink-list')
 const drinkStorrage =[]
 const renderDrinkListItem = (drink) => {
@@ -13,6 +14,8 @@ const renderDrinkListItem = (drink) => {
   const drinkInstructions = document.createElement("p");
   drinkInstructions.innerText = strInstructions;
 
+  const drinkName = document.createElement("h4");
+  drinkName.innerText = strDrink;
 
   const drinkImg = document.createElement("img");
   drinkImg.src = strDrinkThumb;
@@ -20,9 +23,9 @@ const renderDrinkListItem = (drink) => {
 
 
 
-  drinkLi.append(drinkImg, drinkInstructions);
+  drinkLi.append(drinkImg,strDrink,drinkInstructions);
 
-  navAll.append(drinkLi);
+  drinkCard.append(drinkLi);
 };
 
 
@@ -46,7 +49,7 @@ const filterDrinks = (event) => {
   const allDrinkNodes = document.querySelectorAll('.drink')
   allDrinkNodes.forEach(drinkNode =>{
     if(drinkNode.className.includes(event.target.id)) {
-      drinkNode.style.display = 'inline'
+      drinkNode.style.display = 'row'
     }else{
       drinkNode.style.display = 'none'
     }
@@ -56,7 +59,7 @@ const filterDrinks = (event) => {
 const displayAllDrinks = () => {
   const allDrinkNodes = document.querySelectorAll('.drink')
   allDrinkNodes.forEach(drinkNode =>{
-    drinkNode.style.display = 'inline'
+    drinkNode.style.display = 'row'
    
   })
 }

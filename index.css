@@ -1,62 +1,93 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-  
+    font-family: roboto;
+    
+    
+    
   }
-  
-  .container {
-    position: sticky;
-    width: 1200px;
-    height: 300px;
-    margin: 240px auto;
-    background: rgb(1, 7, 4);
-    
-}
-.container .box {
-    position: relative;
-    width: calc(400px - 30px);
-    height: cacl(300px - 30px);
-    background: rgb(9, 12, 1);
-    float: left;
-    margin: 15px;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 10px;
-}
- .button {
-    display: inline;
-    justify-content: space-around;
-    align-items: baseline;
-    min-height: 8vh;
-    background-color: 5v4954;
-    
-}
-.logo {
-    color: rgb(226, 226,226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-
-}
-
-img {
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.drinkText {
-    font-size: 15pt;
-    
-    
-}
-
-.drink {
+  .drink-selection-buttons { 
     list-style-type: none ;
     border-style: solid;
     padding: 20px;
-    margin: 5px;
-}
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    
+    font-size: 20pt;
+  } 
+
+  .content-container{
+    margin: 0;
+    display: grid;
+    font-family: sans-serif;
+    padding-top: 30px;
+    color: thistle;
+  }
+  
+  button {
+      font-size: 30px;
+      padding: 20px;
+      box-shadow: 0px 50px rgba(0,0,0,.5);
+      transform: translate(-50%, -50%);
+      background-color: #1670f0;  
+  }
+ 
+
+  .drink  {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1200px;
+    grid-template-rows: 270px 10x 1500x 50px;
+    grid-template-areas: "image" "h4" "p" "liker";
+    float: left;
+    grid-gap: 0pt;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-radius: 18px;
+    border-color: tomato;
+    background: rgb(22, 21, 21);
+    color: white;
+    /* box-shadow: 5px 5px 15px rgba(0,0,0,0,9);  */
+    text-align: start;
+    overflow: hidden;
+    margin: 10px;
+    
+    
+    
+  }
+  .drink-image {
+    background-image: linear-gradient(#fff0);
+    grid-area: image;
+    display: cover;
+    width: 220px;
+    height: 200px;
+    margin-left: 0px;
+    margin-right: 20px;
+    
+  }
+
+  .drink-h4 {
+    grid-area: h4;
+    font-size: 14pt;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+  }
+
+  .drink p{
+    grid-area: p;
+    margin: 25px;
+    font-size: 14pt;
+    
+    
+  }
+
+  .button {
+      background-color: turquoise;
+  }
+  
+  
+  
