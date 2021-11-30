@@ -1,131 +1,50 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-
-}
-
-.container {
-  position: relative;
-  width: 1200px;
-  height: 300px;
-  margin: 240px auto;
-  background: #000;
-}
-
-/* h1 {
-  color: white;
-  text-align: center;
-}
-
-p {
-  font-family: verdana;
-  font-size: 20px;
-} */
-img {
-  width: 200px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: roboto;
-  
-}
-header {
-    background-color: #55d6aa;
-    width: 80%;
-    margin: 0 auto;
-}
-
-header ::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-nav {
-    float: right;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0pt;
-    list-style: none;
-    background-color: #55d6aa;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 25px;
-  
-
-}
-nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.drink-selection-buttons { 
-  list-style-type: none ;
-  border-style: solid;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  margin: 0px;
-  background-color: black;
-} 
-.content-container{
-  margin: 0;
-  display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-  grid-auto-rows: auto; */
-  /* gap: 20px; */
-  font-family: sans-serif;
-  padding-top: 30px;
-}
+width: 200px;
+height: 100;
+display: grid
+grid-template-columns: 1200px;
+grid-template-rows: 5170px 10x 2500x 50px;
+grid-template-areas: "image" "h4" "p" "liker";
+float: left;
+grid-gap: 0pt;
+padding-right: 0px;
+padding-left: 0px;
+border-radius: 10px;
+background: rgb(22, 21, 21);
+text-align: stack;
+overflow: scroll;
+margin: 10px;
 
 
 
-.drink  {
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "imageg" "p" "h4";
-
-  
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0,9);
-  text-align: center;
-  overflow: hidden;
-  
 }
-.image{
-  render-size
-  grid-area: img;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-size: cover;
-}
-.drink-p{
-  grid-area: p;
+.drink-image {
+background-image: linear-gradient(#fff0);
+grid-area: image;
+display: cover;
+width: 220px;
+height: 200px;
+margin-left: 0px;
+margin-right: 20px;
 
 }
+
 .drink-h4 {
-  grid-area: h4;
+grid-area: h4;
+font-size: 14pt;
+overflow: hidden;
+color: white;
+text-align: center;
+}
+
+.drink p{
+grid-area: p;
+margin: 70px;
+font-size: 10pt;
+text-align: left;
 
 }
 
-/* .img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-} */
+
+
 
 
