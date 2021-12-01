@@ -17,9 +17,6 @@ body {
     width: 100%;
     height: 30px;
     margin: 0px;
-    
-
-
 }
 
 
@@ -43,15 +40,13 @@ body {
 
 .drink {
     width: 150px;
-    height: 400;
+    height: 400px;
     margin: 10px;
     font-size: 15px;
     text-align: center;
-    overscroll-behavior: auto;
     display: grid;
-    -ms-layout-grid-type: fixed;
     grid-template-columns: 200px;
-    grid-template-rows: 200px 10x 250x 50px;
+    grid-template-rows: auto;
     grid-template-areas: "image" "h4" "p" "span";
     float: left;
     grid-gap: 0pt;
@@ -60,6 +55,7 @@ body {
     background-color: floralwhite;
     text-align: stack;
     margin: 10px;
+    overflow-y: scroll;
     
     
     
@@ -84,20 +80,21 @@ body {
     grid-area: h4;
     color: white;
     text-align: center;
+    width: 200px;
+    margin: 5px;
+    
+    
     
 
 }
 
-.drink-p{
-    text-overflow: none;
+drink-p{
     grid-area: p;
     margin: 10px;
     font-size: 15pt;
     font-family: sans-serif;
     text-align: center;
-    height: 100px;
-    width: 300px;
-    
+    height: 60px;
+    overflow-y: scroll;
     
 }
-

@@ -43,6 +43,7 @@ const renderDrinkListItem = (drink) => {
   drinkLi.append(drinkImg,drinkName,drinkInstructions,likerButton);
 
   drinkCard.append(drinkLi);
+  drinkStorrage.push(drinkLi)
 };
 
 
@@ -54,7 +55,6 @@ function fetchData(){
   .then(res => res.json())
   .then(data => { 
     data.drinks.forEach(drink =>{
-      drinkStorrage.push(drink)
       renderDrinkListItem(drink)
     
     })
@@ -62,10 +62,10 @@ function fetchData(){
 }
 
 const filterDrinks = (event) => {
-
   drinkStorrage.forEach(drinkNode =>{
+    console.log(drinkStorrage)
     if(drinkNode.className.includes(event.target.id)) {
-      drinkNode.style.display = 'row'
+      drinkNode.style.display = ''
     }else{
       drinkNode.style.display = 'none'
     }
@@ -74,7 +74,7 @@ const filterDrinks = (event) => {
  
 const displayAllDrinks = () => {
   drinkStorrage.forEach(drinkNode =>{
-    drinkNode.style.display = 'row'
+    drinkNode.style.display = ''
    
   })
 }
