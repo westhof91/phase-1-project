@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded',() =>{
 
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
+
 function likeCallback(e) {
   const heart = e.target
       if (heart.innerText === EMPTY_HEART){
@@ -17,10 +18,12 @@ function likeCallback(e) {
       }
 
 }
+
 const siteUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
 const drinkCard = document.getElementById("all-drinks")
 const drinkList = document.getElementById('drink-list')
 const drinkStorrage =[]
+
 const renderDrinkListItem = (drink) => {
   const {strDrink, strCategory, strDrinkThumb, strIngredient1, strInstructions} = drink;
   const drinkLi = document.createElement("li");
@@ -33,23 +36,19 @@ const renderDrinkListItem = (drink) => {
   likerButton.innerText = EMPTY_HEART;
   likerButton.addEventListener("click", likeCallback );
 
-
   const drinkName = document.createElement("h4");
   drinkName.innerText = strDrink;
 
   const drinkImg = document.createElement("img");
   drinkImg.src = strDrinkThumb;
   drinkImg.className = "drink-image";
-  drinkLi.append(drinkImg,drinkName,drinkInstructions,likerButton);
 
+  drinkLi.append(drinkImg,drinkName,drinkInstructions,likerButton);
   drinkCard.append(drinkLi);
+
   drinkStorrage.push(drinkLi)
 };
 
-
-
-
-// event handlers
 function fetchData(){
   fetch(siteUrl)
   .then(res => res.json())
@@ -61,9 +60,9 @@ function fetchData(){
   })
 }
 
+// event handlers
 const filterDrinks = (event) => {
   drinkStorrage.forEach(drinkNode =>{
-    console.log(drinkStorrage)
     if(drinkNode.className.includes(event.target.id)) {
       drinkNode.style.display = ''
     }else{
@@ -78,8 +77,6 @@ const displayAllDrinks = () => {
    
   })
 }
- 
-
 
 function listeners() {
   const vodkaBttn = document.getElementById('vodka')
@@ -96,8 +93,6 @@ function listeners() {
 
   const allDrinksBttn = document.getElementById('all-drink')
   allDrinksBttn.addEventListener('click', displayAllDrinks)
-
-
 }
 
  
